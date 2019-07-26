@@ -1,21 +1,649 @@
 
 <!DOCTYPE html><html lang='en' class=''>
-<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/shreesha-bhat/pen/NQRzmQ" />
-<style class="cp-pen-styles">.title{
-  text.align: centre;
-  color:red;
+<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/jkris/pen/WoLJxq" />
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css'>
+<style class="cp-pen-styles">body {
+	font-family: Verdana, Roboto, Open Sans;
+	font-size: 12px;
+}
+
+main {
+	padding-left: 0;
+}
+
+i {
+	vertical-align: middle;
+}
+
+.cv-wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+.cv-spclink {
+	font-weight: bold !important;
+}
+
+ul > li, ol > li,  {
+	text-align: justify;
+}
+
+.cv-co {
+	text-align: justify;
+}
+
+.cv-topborder {
+	height: 15px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.cv-photowrapper {
+	width: 125px;
+	padding: 5px;
+	border-radius: 2px;
+	margin: auto;
+}
+
+.cv-personalinfo {
+	font-weight: bold;
+}
+
+.cv-title {
+	font-family: Orbitron, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.cv-subtitle {
+	font-family: Orbitron, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.cv-sub {
+	font-weight: bold;
+}
+
+.cv-listtitle {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.cv-list {
+	margin-top: 0;
+}
+
+.cv-spctext {
+	font-style: italic;
+}
+
+.new.badge {
+	font-size: 8px;
+}
+
+.text-right {
+	text-align: left;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.cv-pinfogroup {
+	text-align: center;
+}
+
+.cv-hide {
+	animation: toggleHide 0.2s ease-in-out forwards;
+}
+
+.cv-show {
+	animation: toggleShow 0.3s ease-in-out forwards;
+}
+
+@keyframes toggleShow {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes toggleHide {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@media (min-width: 993px) {
+	.text-right {
+		text-align: right;
+	}
+	
+	main {
+		padding-left: 300px;
+	}
+	
+	.cv-pinfogroup {
+		text-align: left;
+	}
+	
+	.cv-photowrapper {
+		margin: 0;
+		float: right;
+	}
+}
+
+.cv-printable {
+	display: none;
+}
+
+@media print {
+	@page {
+		margin: 0.5in;
+	}
+	
+	.col.s12 {
+		page-break-inside: auto;
+	}
+	
+	.card-content {
+		page-break-after: avoid;
+	}
+	
+	header {
+		display: none;
+	}
+	
+	.divider {
+		margin-bottom: 10px;
+	}
+	
+	.text-right {
+		text-align: right;
+	}
+	
+	.cv-pinfogroup {
+		text-align: left;
+	}
+	
+	.cv-photowrapper {
+		width: 1.25in;
+		margin: 0;
+		float: right;
+	}
+	
+	.cv-nonprintable {
+		display: none;
+	}
+	
+	.cv-printable {
+		display: inline;
+	}
+	
+	.cv-title {
+		font-size: 16px;
+	}
+	
+	.cv-listtitle {
+		page-break-after: avoid;
+	}
+	
+	.cv-list {
+		page-break-before: avoid;
+	}
+	
+	.cv-subtitle {
+		font-size: 12px;
+		text-align: left;
+	}
+	
+	.new.badge {
+		font-size: 10px !important;
+	}
+	
+	.cv-sub {
+		font-size: 10px;
+		text-align: left;
+		clear: both;
+	}
+	
+	body {
+		font-size: 12px;
+	}
+	
+	.icon-smaller {
+		transform-origin: top left;
+		transform: scale(1.5);
+	}
 }</style></head><body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-</head>
-<body>
-<h1 class='title'>welcome To My website</h1>
-<p>hi, I'am Shreesha Bhat.I'm a Final year engineering student</p>
-</body>
-</html>
+<header>
+<div class="navbar-fixed hide-on-large-only">
+<nav class="grey darken-3 z-depth-3">
+<div class="nav-wrapper">
+<a href="#" data-activates="cv-nav" class="button-collapse">
+<i class="material-icons">menu</i>
+</a>
+<a href="#" class="brand-logo center">Online Resume</a>
+</div>
+</nav>
+</div>
+<ul id="cv-nav" class="side-nav fixed center-align grey darken-3 z-depth-3">
+<li class="cv-title light-green"><a href="#fullname" class="cv-spclink waves-effect waves-light">Shreesha Bhat</a></li>
+<li class="cv-title"><a href="#objective" class="light-green-text waves-effect waves-light">Career Objective</a></li>
+<li class="cv-title"><a href="#skill" class="light-green-text waves-effect waves-light">Technical Skills</a></li>
+<li class="cv-title"><a href="#experience" class="light-green-text waves-effect waves-light">Experience</a></li>
+<li class="cv-title"><a href="#education" class="light-green-text waves-effect waves-light">Education</a></li>
+<li class="cv-title"><a href="#honoraward" class="light-green-text waves-effect waves-light">Honors/Awards</a></li>
+<li class="cv-title white"><a href="#!" class="light-green-text text-darken-4 waves-effect waves-green" onclick="print_doc('#cv-printable')">Print Resume</a></li>
+</ul>
+</header>
+<main class="cv-nonprintable">
+<div class="cv-wrapper container">
+<div class="card z-depth-4 center grey lighten-3">
+<div class="divider cv-topborder light-green"></div>
+<div id="fullname" class="row scrollspy">
+<div class="card-content cv-header">
+<div class="col s6 l3 offset-s3">
+<div class="cv-photowrapper white z-depth-2">
+<img src="https://res.cloudinary.com/jkris/image/upload/v1482046789/personal/jcfpic_rphghz.jpg" alt="jkrisc" class="responsive-img" />
+</div>
+</div>
+<div class="col s12 l9 cv-pinfogroup">
+<div><span class="card-title cv-fullname cv-title">Shreesha Bhat</span></div>
+<div class="cv-personalinfo">
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny yellow-text text-darken-4">work</i> SOFTWARE DEVELOPER, 22 Years old</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny pink-text">location_on</i> Moodbidri</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny indigo-text">stay_primary_portrait</i> +971 50 818 8589</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny green-text">email</i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c3f041e09091f040d0e040d185e5b2c0b010d0500420f0301">[email&#160;protected]</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="divider grey"></div>
+<div class="card-content cv-body white center">
+<div id="objective" class="row scrollspy">
+<div class="cv-title text-right col s12 l3">Career Objective</div>
+<div class="text-left col s12 l9">
+<div class="col s12 l12 cv-co">
+To further my knowledge on software and web application development techniques and life cycles, be able to contribute and work on a meaningful and purposeful project, and be a part of a productive team with similar aspirations.
+</div>
+</div>
+</div>
+<div id="skill" class="row scrollspy">
+<div class="cv-title text-right col s12 l3">Technical Skills</div>
+<div class="text-left col s12 l9">
+<div class="col s12 l12">
+<div class="cv-subtitle light-green-text text-darken-3">Programming Languages</div>
+<div class="col s12 l6">
+<span class="cv-listtitle">Web</span>
+<ul class="cv-list browser-default">
+<li>Angular 8+ <span class="cv-spctext grey-text">Framework</span></li>
+<li>Angular Material <span class="cv-spctext grey-text">Framework</span></li>
+<li>Typescript & Javascript</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+</div>
+<div class="col s12 l6">
+<span class="cv-listtitle">Other</span>
+<ul class="cv-list browser-default">
+<li>C#.Net</li>
+<li>.Net Core</li>
+<li>Entity Framework Core</li>
+<li>Entity Framework 6.0</li>
+</ul>
+<span class="cv-listtitle">Database</span>
+<ul class="cv-list browser-default">
+<li>MS SQL Server / T-SQL</li>
+</ul>
+</div>
+</div>
+<div class="col s12 l12">
+<div class="cv-subtitle light-green-text text-darken-3">Other Software</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Multimedia</span>
+<ul class="cv-list browser-default">
+<li>Inkscape</li>
+<li>Adobe Illustrator</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="experience" class="row scrollspy">
+<div class="cv-title text-right col s12 l3">Experience</div>
+<div class="text-left col s12 l9">
+<div class="col s12 l12">
+<div>
+<span class="cv-subtitle light-green-text text-darken-3">Software Developer</span>
+<span class="new badge light-green" data-badge-caption="March 2016 - Present"></span>
+</div>
+<div>
+<span class="cv-sub grey-text">Injaz National General Enterprises L.L.C., Abu Dhabi, UAE</span>
+</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Modular Platform for Integrated Systems</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineer/head of innovation to come up with a plan to develop a modular system consisting of the following: <ol>
+<li>
+<b>Access Control System</b> - The system is supposed to interact with ANPR cameras, and is sending a payload to the web relay through http to communicate with Gate Barriers. The system is currently accepting plate numbers as text input and process them for the gate barriers to repond to various scenarios.
+</li>
+<li>
+<b>Vehicle Counting System</b> - A background service is running to read outputs from web relays connected to loop detectors which then updates the count in the database. The backend service is also reponsible of updating the information displayed on the VMS.
+</li>
+<li>
+<b>Asset and Warehouse Management System</b> - A simple asset management system which will handle the warehouse for the assets deployed in implementation of the systems handled by the platform. Utilizes QR code as tags and scanning can be done from mobile phones.
+</li>
+</ol></li>
+</ul>
+<span class="cv-listtitle">VMS Interactive Android App (demo)</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineers and came up with a plan to develop an android app with an interface to send http requests to the back-end server, then the server sends a command to the VMS based on the request and responds with success or error.</li>
+</ul>
+<span class="cv-listtitle">Issues Maintenance Management System</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineers and came up with a plan to develop a system for managing issues of a Parking Management Installation Project.</li>
+<li>Designed and developed a system which allows the registered user to <b>1.</b> Manage issue maintenance records. <b>2.</b> Assign issues as tasks, and confirm rectified issues. <b>3.</b> Generate Reports.</li>
+</ul>
+<span class="cv-listtitle">Web Application for Creating Daily Job Records</span>
+<ul class="cv-list browser-default">
+<li>Coordinated and gathered requirements and information about a Road Marking Company's current daily-job-record-managing operation and planned on developing a system for managing projects and storing daily job records which provides an easy way to generate monthly or weekly reports.</li>
+<li>Designed and developed a web application, deployed on the intranet, which allows <b>1.</b> The administrators to manage users, create and manage projects, view created daily job records and generate reports. <b>2.</b> The foremen to create their daily job record.</li>
+</ul>
+</div>
+</div>
+<div class="col s12 l12">
+<div>
+<span class="cv-subtitle light-green-text text-darken-3">IT Specialist</span>
+<span class="new badge light-green" data-badge-caption="2013 - 2014"></span>
+</div>
+<div>
+<span class="cv-sub grey-text">Forecasting and Planning Technologies Inc., Philippines</span>
+</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Real Estate Selling System</span>
+<ul class="cv-list browser-default">
+<li>Worked with a team consisting of a Lead Programmer, Programmer (IT Specialist) and an Analyst in developing new modules and customizing existing modules designed and specified by the Project Manager and the Analyst.</li>
+<li>Developed and customized existing modules and created new reports following the specifications of the Analyst.</li>
+<li>Coordinated with the Lead Programmer in making a script for migrating and reformatting thousands of records from the client's old database to the new database.</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div id="education" class="row scrollspy">
+<div class="cv-title text-right col s12 l3">Education</div>
+<div class="text-left col s12 l9">
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">STI College Fairview </span><span class="cv-spctext grey-text">Philippines</span>
+<span class="new badge light-green" data-badge-caption="2008 - 2012"></span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Bachelor of Science in Computer Science</span>
+</div>
+</div>
+</div>
+</div>
+<div id="honoraward" class="row scrollspy">
+<div class="cv-title text-right col s12 l3">Honors/Awards</div>
+<div class="text-left col s12 l9">
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">Academic</span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Consistent Dean's Lister for 6 semesters.</span>
+<ul></ul>
+</div>
+</div>
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">National Collegiate Competition</span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Won as 2<sup>nd</sup> runner-up in Into Programming Senior Division in STI Tagisan ng Talino-Nationals Finals.</span>
+</div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cv-backtotop" class="fixed-action-btn hide">
+<a href="#fullname" class="btn-floating btn-large deep-orange hoverable"><i class="material-icons">navigation</i></a>
+<ul></ul>
+</div>
+</main>
+
+<main class="cv-printable">
+<div class="cv-wrapper container">
+<div class="center">
+<div id="fullname" class="row scrollspy">
+<div class="cv-header">
+<div class="col s3 l3">
+<div class="cv-photowrapper white">
+<img src="https://res.cloudinary.com/jkris/image/upload/v1482046789/personal/jcfpic_rphghz.jpg" alt="jkrisc" class="responsive-img" />
+</div>
+</div>
+<div class="col s9 l9 cv-pinfogroup">
+<div><span class="card-title cv-fullname cv-title">Janiel Kris B. Custodio</span></div>
+<div class="cv-personalinfo">
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny yellow-text text-darken-4">work</i> SOFTWARE ENGINEER, 27 yrs old</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny pink-text">location_on</i> Abu Dhabi, UAE</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny indigo-text">stay_primary_portrait</i> +971 50 818 8589</div>
+<div class="grey-text text-darken-2 col s12 l12"><i class="material-icons tiny green-text">email</i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="721819001b01060704050a0b0832151f131b1e5c111d1f">[email&#160;protected]</a></div>
+<div class="grey-text text-darken-2 col s12 l12">
+View CV Online through this link: <a href="https://codepen.io/jkris/full/WoLJxq/">https://codepen.io/jkris/full/WoLJxq/</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="divider grey"></div>
+<div class="card-content cv-body white center">
+<div id="objective" class="row scrollspy">
+<div class="cv-title text-right col s3 l3">Career Objective</div>
+<div class="text-left col s9 l9">
+<div class="col s12 l12 cv-co">
+To further my knowledge on software and web application development techniques and life cycles, be able to contribute and work on a meaningful and purposeful project, and be a part of a productive team with similar aspirations.
+</div>
+</div>
+</div>
+<div id="skill" class="row scrollspy">
+<div class="cv-title text-right col s3 l3">Technical Skills</div>
+<div class="text-left col s9 l9">
+<div class="col s12 l12">
+<div class="cv-subtitle light-green-text text-darken-3">Programming Languages</div>
+<div class="col s6 l6">
+<span class="cv-listtitle">Web</span>
+<ul class="cv-list browser-default">
+<li>Angular 8+ <span class="cv-spctext grey-text">Framework</span></li>
+<li>Angular Material <span class="cv-spctext grey-text">Framework</span></li>
+<li>Typescript & Javascript</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+</div>
+<div class="col s6 l6">
+<span class="cv-listtitle">Other</span>
+<ul class="cv-list browser-default">
+<li>C#.Net</li>
+<li>.Net Core</li>
+<li>Entity Framework Core</li>
+<li>Entity Framework 6.0</li>
+</ul>
+<span class="cv-listtitle">Database</span>
+<ul class="cv-list browser-default">
+<li>MS SQL Server / T-SQL</li>
+</ul>
+</div>
+</div>
+<div class="col s12 l12">
+<div class="cv-subtitle light-green-text text-darken-3">Other Software</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Multimedia</span>
+<ul class="cv-list browser-default">
+<li>Inkscape</li>
+<li>Adobe Illustrator</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="experience" class="row scrollspy">
+<div class="cv-title text-right col s3 l3">Experience</div>
+<div class="text-left col s9 l9">
+<div class="col s12 l12">
+<div>
+<span class="cv-subtitle light-green-text text-darken-3">Software Developer</span>
+<span class="new badge light-green" data-badge-caption="March 2016 - Present"></span>
+</div>
+<div class="cv-sub grey-text">
+Injaz National General Enterprises L.L.C., Abu Dhabi, UAE
+</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Modular Platform for Integrated Systems</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineer/head of innovation to come up with a plan to develop a modular system consisting of the following: <ol>
+<li>
+<b>Access Control System</b> - The system is supposed to interact with ANPR cameras. The system is currently accepting plate numbers as text input and process them for the gate barriers to repond to various scenarios through web relays.
+</li>
+<li>
+<b>Vehicle Counting System</b> - A background service is running to read outputs from web relays connected to loop detectors which then updates the count in the database. The backend service is also reponsible of updating the information displayed on the VMS.
+</li>
+<li>
+<b>Asset and Warehouse Management System</b> - A simple asset management system which will handle the warehouse for the assets deployed in implementation of the systems handled by the platform. Utilizes QR code as tags and scanning can be done from mobile phones.
+</li>
+</ol></li>
+</ul>
+<span class="cv-listtitle">VMS Interactive Android App (demo)</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineers and came up with a plan to develop an android app with an interface to send http requests to the back-end server, then the server sends a command to the VMS based on the request and responds with success or error.</li>
+</ul>
+<span class="cv-listtitle">Issues Maintenance Management System</span>
+<ul class="cv-list browser-default">
+<li>Coordinated with the project engineers and came up with a plan to develop a system for managing issues of a Parking Management Installation Project.</li>
+<li>Designed and developed a system which allows the registered user to <b>1.</b> Manage issue maintenance records. <b>2.</b> Assign issues as tasks, and confirm rectified issues. <b>3.</b> Generate Reports.</li>
+</ul>
+<span class="cv-listtitle">Web Application for Creating Daily Job Records</span>
+<ul class="cv-list browser-default">
+<li>Coordinated and gathered requirements and information about a Road Marking Company's current daily-job-record-managing operation and planned on developing a system for managing projects and storing daily job records which provides an easy way to generate monthly or weekly reports.</li>
+<li>Designed and developed a web application, deployed on the intranet, which allows <b>1.</b> The administrators to manage users, create and manage projects, view created daily job records and generate reports. <b>2.</b> The foremen to create their daily job record.</li>
+</ul>
+</div>
+</div>
+<div class="col s12 l12">
+<div>
+<span class="cv-subtitle light-green-text text-darken-3">IT Specialist</span>
+<span class="new badge light-green" data-badge-caption="2013 - 2014"></span>
+</div>
+<div class="cv-sub grey-text">
+Forecasting and Planning Technologies Inc., Philippines
+</div>
+<div class="col s12 l12">
+<span class="cv-listtitle">Real Estate Selling System</span>
+<ul class="cv-list browser-default">
+<li>Worked with a team consisting of a Lead Programmer, Programmer (IT Specialist) and an Analyst in developing new modules and customizing existing modules designed and specified by the Project Manager and the Analyst.</li>
+<li>Developed and customized existing modules and created new reports following the specifications of the Analyst.</li>
+<li>Coordinated with the Lead Programmer in making a script for migrating and reformatting thousands of records from the client's old database to the new database.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="education" class="row scrollspy">
+<div class="cv-title text-right col s3 l3">Education</div>
+<div class="text-left col s9 l9">
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">STI College Fairview </span><span class="cv-spctext grey-text">Philippines</span>
+<span class="new badge light-green" data-badge-caption="2008 - 2012"></span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Bachelor of Science in Computer Science</span>
+</div>
+</div>
+</div>
+</div>
+<div id="honoraward" class="row scrollspy">
+<div class="cv-title text-right col s3 l3">Honors/Awards</div>
+<div class="text-left col s9 l9">
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">Academic</span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Consistent Dean's Lister for 6 semesters.</span>
+<ul></ul>
+</div>
+</div>
+<div class="col s12 l12">
+<span class="cv-subtitle light-green-text text-darken-3">National Collegiate Competition</span>
+<div class="col s12 l12">
+<span class="cv-listtitle">Won as 2<sup>nd</sup> runner-up in Into Programming Senior Division in STI Tagisan ng Talino-Nationals Finals.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cv-backtotop" class="fixed-action-btn hide">
+<a href="#fullname" class="btn-floating btn-large deep-orange hoverable"><i class="material-icons">navigation</i></a>
+<ul></ul>
+</div>
+</main>
+<footer>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src='https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
+<script id="rendered-js">
+          $(document).ready(function () {
+  $("#cv-printable").hide();
+
+  $(".button-collapse").sideNav();
+
+  $(".scrollspy").scrollSpy();
+
+  $("#cv-backtotop").removeClass("hide");
+  $("#cv-backtotop").addClass("cv-hide");
+});
+
+$("#cv-nav li a").click(function () {
+  $(".button-collapse").sideNav("hide");
+  return false;
+});
+
+$(window).scroll(function () {
+  var currentScroll = $(this).scrollTop();
+
+  if (currentScroll > 200) {
+    //$("#cv-backtotop").removeClass("hide");
+    //$("#cv-backtotop").fadeIn(200);
+    $("#cv-backtotop").addClass("cv-show");
+    $("#cv-backtotop").removeClass("cv-hide");
+
+  } else {
+    /*$("#cv-backtotop").fadeOut(200, function() {
+          	$("#cv-backtotop").addClass("hide");
+          });*/
+    $("#cv-backtotop").addClass("cv-hide");
+    $("#cv-backtotop").removeClass("cv-show");
+  }
+});
+
+$(window).on("load resize", function () {
+  var width = $(window).width(),height = $(window).height();
+  if (width <= 992) {
+    $("body").addClass("flow-text");
+  } else {
+    $("body").removeClass("flow-text");
+  }
+});
+
+function print_doc(e) {
+  window.print();
+}
+          //# sourceURL=pen.js
+        </script>
 </body></html>
